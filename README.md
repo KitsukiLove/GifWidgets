@@ -1,12 +1,16 @@
 <div align="center">
 
-<img src="docs/img/portada-es.png" alt="GifWidgets: tus GIF como widgets animados, dentro de un escritorio pixel con ovejitas" width="100%">
+<img src="docs/img/portada-es.gif" alt="GifWidgets: tus GIF como widgets animados, dentro de un escritorio pixel con ovejitas" width="100%">
 
 </div>
 
 <p align="center">
   <b>Convierte tus GIF en widgets animados para la pantalla de inicio de Android.</b><br>
   Sin internet, sin cuentas, sin anuncios y con el mínimo gasto de batería.
+</p>
+
+<p align="center">
+  <img src="docs/img/badge-android.png" alt="Android 8 o superior" height="30"> <img src="docs/img/badge-local.png" alt="100% local, sin internet" height="30"> <img src="docs/img/badge-gpl.png" alt="Licencia GPL-3.0" height="30"> <img src="docs/img/badge-idiomas-es.png" alt="Español e inglés" height="30"> <img src="docs/img/badge-kotlin.png" alt="Kotlin y Jetpack Compose" height="30">
 </p>
 
 <p align="center">
@@ -28,7 +32,7 @@
 <br>
 
 <a id="que-es"></a>
-<img src="docs/img/bar-que-es.png" alt="que-es.exe" width="100%">
+<img src="docs/img/sec-que-es.gif" alt="que-es.exe" width="100%">
 
 GifWidgets guarda tus GIF en una biblioteca privada y los pone como **widgets animados** en tu pantalla de inicio. Los optimiza al importarlos (fotogramas WebP) para que el widget sea fluido y gaste muy poco, y te deja ajustar cómo se ve cada widget. Está pensada para pixel art y banners con brillos sobre fondo negro, pero sirve para cualquier GIF.
 
@@ -52,7 +56,7 @@ GifWidgets guarda tus GIF en una biblioteca privada y los pone como **widgets an
 | **Licencia** | GNU GPL v3.0, compatible con F-Droid |
 
 <a id="galeria"></a>
-<img src="docs/img/bar-galeria.png" alt="galeria.exe" width="100%">
+<img src="docs/img/sec-galeria.gif" alt="galeria.exe" width="100%">
 
 <table>
 <tr><td align="center" valign="top" width="25%"><img src="docs/img/shots/pixel.png" alt="GifWidgets en estilo Pixel" width="100%"></td><td align="center" valign="top" width="25%"><img src="docs/img/shots/colina-xp.png" alt="GifWidgets en estilo Colina XP" width="100%"></td><td align="center" valign="top" width="25%"><img src="docs/img/shots/halloween.png" alt="GifWidgets con la estación Halloween" width="100%"></td><td align="center" valign="top" width="25%"><img src="docs/img/shots/ajustes.png" alt="Pantalla de Ajustes con secciones plegables" width="100%"></td></tr>
@@ -60,26 +64,33 @@ GifWidgets guarda tus GIF en una biblioteca privada y los pone como **widgets an
 </table>
 
 <a id="instalar"></a>
-<img src="docs/img/bar-instalar.png" alt="instalar.exe" width="100%">
+<img src="docs/img/sec-instalar.gif" alt="instalar.exe" width="100%">
 
 **Descargar**
 
-1. Entra a **[Releases](https://github.com/KitsukiLove/GifWidgets/releases/latest)** desde el navegador de tu móvil.
-2. Descarga el archivo `GifWidgets-….apk` de la última versión.
-3. Ábrelo. Android te pedirá permitir «instalar apps desconocidas» a tu navegador o a tu app de archivos: acéptalo solo para este paso.
-4. Si sale el aviso de **Play Protect** («Se recomienda analizar la app»), no es un error: toca **«Instalar sin analizar»** (el texto pequeño) o **«Analizar app»**, que la manda a revisar y luego te deja instalarla. Sale con cualquier app que no viene de una tienda.
-5. Abre GifWidgets.
+<table>
+<tr><td align="center" valign="top" width="50%"><img src="docs/img/step-es-paso1.png" alt="paso1" width="100%"><br><sub>Entra a <a href="https://github.com/KitsukiLove/GifWidgets/releases/latest"><b>Releases</b></a> desde el navegador del móvil y descarga el archivo <code>GifWidgets-….apk</code> de la última versión.</sub></td><td align="center" valign="top" width="50%"><img src="docs/img/step-es-paso2.png" alt="paso2" width="100%"><br><sub>Ábrelo. Android pedirá permitir «instalar apps desconocidas» a tu navegador o a tu app de archivos: acéptalo solo para este paso.</sub></td></tr>
+<tr><td align="center" valign="top" width="50%"><img src="docs/img/step-es-paso3.png" alt="paso3" width="100%"><br><sub>Si sale el aviso de <b>Play Protect</b> («Se recomienda analizar la app»), no es un error: toca <b>«Instalar sin analizar»</b> (el texto pequeño) o <b>«Analizar app»</b>.</sub></td><td align="center" valign="top" width="50%"><img src="docs/img/step-es-paso4.png" alt="paso4" width="100%"><br><sub>Abre GifWidgets. Ese aviso sale con cualquier app que no viene de una tienda.</sub></td></tr>
+</table>
 
 > **Antes de actualizar:** el APK de cada versión se firma con una clave de depuración distinta, así que Android no deja instalar una versión **encima** de otra: hay que desinstalar la anterior, y eso borra tu biblioteca. Antes, usa **Ajustes → Copia de la biblioteca → Exportar** para guardar un ZIP, y después **Importar** en la versión nueva.
 
 **Primeros pasos**
 
-1. Pulsa **Importar GIF** (o comparte un GIF desde otra app con «Añadir a GifWidgets»).
-2. Mantén pulsada la pantalla de inicio → **Widgets** → **GifWidgets** y elige un tamaño. También puedes usar **Añadir a pantalla de inicio** desde la tarjeta de un GIF.
-3. Para cambiar su aspecto: mantén pulsado el widget → configurar.
+<table>
+<tr><td align="center" valign="top" width="33%"><img src="docs/img/step-es-inicio1.png" alt="inicio1" width="100%"><br><sub>Pulsa <b>Importar GIF</b>, o comparte un GIF desde otra app con «Añadir a GifWidgets».</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/step-es-inicio2.png" alt="inicio2" width="100%"><br><sub>Mantén pulsada la pantalla de inicio → <b>Widgets</b> → <b>GifWidgets</b> y elige un tamaño. También sirve <b>Añadir a pantalla de inicio</b> en la tarjeta de un GIF.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/step-es-inicio3.png" alt="inicio3" width="100%"><br><sub>Mantén pulsado el widget → configurar. Todo viene con valores por defecto, así que es opcional.</sub></td></tr>
+</table>
 
 <a id="funciones"></a>
-<img src="docs/img/bar-funciones.png" alt="funciones.exe" width="100%">
+<img src="docs/img/sec-funciones.gif" alt="funciones.exe" width="100%">
+
+<table>
+<tr><td align="center" valign="top" width="33%"><img src="docs/img/card-es-widgets.png" alt="widgets" width="100%"><br><sub>2×2, 4×2 y 4×4 con encuadre, esquinas, bordes y toque a tu gusto.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-biblioteca.png" alt="biblioteca" width="100%"><br><sub>Favoritos, colecciones, buscador y vista de lista.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-editor.png" alt="editor" width="100%"><br><sub>Quita fondos, recorta y mide la memoria antes de guardar.</sub></td></tr>
+<tr><td align="center" valign="top" width="33%"><img src="docs/img/card-es-rotacion.png" alt="rotacion" width="100%"><br><sub>Cambia de GIF solo, cada 15 min hasta cada 24 h.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-calidad.png" alt="calidad" width="100%"><br><sub>Fotograma a fotograma y sin límite de memoria (opcional).</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-bateria.png" alt="bateria" width="100%"><br><sub>Pausa universal, ahorro de batería y horario nocturno.</sub></td></tr>
+<tr><td align="center" valign="top" width="33%"><img src="docs/img/card-es-privacidad.png" alt="privacidad" width="100%"><br><sub>Sin internet: todo se queda en tu móvil.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-copia.png" alt="copia" width="100%"><br><sub>Exporta e importa tu biblioteca en un ZIP.</sub></td><td align="center" valign="top" width="33%"><img src="docs/img/card-es-look.png" alt="look" width="100%"><br><sub>Estilos Pixel y Colina XP, 8 estaciones, música y Kixki.</sub></td></tr>
+</table>
+
+**Todo el detalle, por tema:**
 
 <details>
 <summary><b>Widgets</b>: tamaños, aspecto y toque</summary>
@@ -173,7 +184,7 @@ Reproduce el GIF fotograma a fotograma, a su resolución y velocidad, desde un s
 </details>
 
 <a id="privacidad"></a>
-<img src="docs/img/bar-privacidad.png" alt="privacidad.exe" width="100%">
+<img src="docs/img/sec-privacidad.gif" alt="privacidad.exe" width="100%">
 
 **La app no envía nada a ningún sitio. No puede: no tiene permiso de internet.** Sin cuentas, sin anuncios, sin análisis, sin Google Play services y sin modelos de IA.
 
@@ -193,7 +204,7 @@ Ninguno da acceso a internet ni a tus datos, y sin el modo «Máxima calidad» n
 Detalle completo en [`docs/PRIVACY.md`](docs/PRIVACY.md).
 
 <a id="bateria"></a>
-<img src="docs/img/bar-bateria.png" alt="bateria.exe" width="100%">
+<img src="docs/img/sec-bateria.gif" alt="bateria.exe" width="100%">
 
 La idea central: **mientras el widget se mueve, la app no está viva.** Lo anima el launcher con un `ViewFlipper`, así que la app no gasta CPU ni mantiene procesos. Los widgets usan `RemoteViews` clásicos (no Glance) justo por eso.
 
@@ -210,7 +221,7 @@ La idea central: **mientras el widget se mueve, la app no está viva.** Lo anima
 Para medirlo en tu móvil con `adb`: [`docs/BATTERY_TESTING.md`](docs/BATTERY_TESTING.md).
 
 <a id="desarrollo"></a>
-<img src="docs/img/bar-desarrollo.png" alt="desarrollo.exe" width="100%">
+<img src="docs/img/sec-desarrollo.gif" alt="desarrollo.exe" width="100%">
 
 **Stack:** Kotlin, Jetpack Compose con Material 3, `RemoteViews` + `ViewFlipper` para los widgets, un solo módulo `app`, minSdk 26 y targetSdk 36. Package: `app.gifwidgets`.
 
@@ -280,10 +291,10 @@ Código en `app/src/main/kotlin/app/gifwidgets/`. Textos en `values/` (español)
 </details>
 
 <a id="creditos"></a>
-<img src="docs/img/bar-creditos.png" alt="creditos.exe" width="100%">
+<img src="docs/img/sec-creditos.gif" alt="creditos.exe" width="100%">
 
 - **Kixki,** la ovejita, y el look de la app vienen de [KixKi Store](https://github.com/KitsukiLove/KixKi-Store), arte de la propia autora.
 - **Fuentes:** Pixelify Sans y Jersey 10, bajo SIL Open Font License 1.1.
 - **Licencia:** GNU General Public License v3.0 (ver [`LICENSE`](LICENSE)). Compatible con F-Droid. Más en [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
-<p align="center"><img src="docs/img/pie-es.png" alt="Dos ovejitas pixel en el pasto. Hecho con amor por KitsukiLove" width="100%"></p>
+<p align="center"><img src="docs/img/pie-es.gif" alt="Dos ovejitas pixel en el pasto. Hecho con amor por KitsukiLove" width="100%"></p>
