@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Same order as SeasonChoice: AUTO, CLASICA, VALLE, PRIMAVERA, VERANO, OTONO, INVIERNO, HALLOWEEN, NAVIDAD -->
+    <string-array name="season_choice_names">
+        <item>Automática</item>
+        <item>Clásico</item>
+        <item>Valle</item>
+        <item>Primavera</item>
+        <item>Verano</item>
+        <item>Otoño</item>
+        <item>Invierno</item>
+        <item>Halloween</item>
+        <item>Navidad</item>
+    </string-array>
+    <string-array name="tips_library">
+        <item>Puedes elegir varios GIF a la vez al importar: se añaden uno tras otro.</item>
+        <item>Toca ⋯ en una ventana para editar, fijar como widget, renombrar o duplicar el GIF.</item>
+        <item>Los GIF muy pesados se ven menos suaves en un widget. Si pesa mucho, recórtalo en el editor.</item>
+        <item>El botón ▶ de la barra de abajo pausa todos tus widgets de golpe.</item>
+        <item>Con el ahorro de batería los widgets se pausan solos. Puedes cambiarlo en Ajustes.</item>
+        <item>¿Poco espacio? Guarda el GIF optimizado en el editor: pesa mucho menos.</item>
+        <item>Los botones de arriba cambian entre día y noche, música y estación del fondo.</item>
+        <item>Puedes cambiar entre el estilo Píxel y Colina XP con el botón de la ventanita de abajo.</item>
+    </string-array>
+    <string-array name="tips_editor">
+        <item>Mira el contador de memoria: si se pasa del presupuesto, baja el tamaño máximo o los fotogramas por segundo.</item>
+        <item>«Guardar optimizado» deja el GIF listo para usarlo en un widget.</item>
+        <item>Con «Píxel nítido» el pixel art se ve limpio al reducirlo.</item>
+        <item>Si el GIF tiene fondo de un solo color, prueba el cuentagotas para quitarlo.</item>
+        <item>Quitar fotogramas que no hacen falta ahorra memoria y batería.</item>
+        <item>Activa «Ver original» para comparar con el GIF sin cambios.</item>
+    </string-array>
+    <string-array name="tips_widget">
+        <item>«Rellenar» llena todo el widget cortando un poco; «Ajustar» muestra el GIF entero, con barras vacías.</item>
+        <item>«Automático» elige solo cómo encajar el GIF. Si no te gusta, prueba «Ajustar» o «Rellenar».</item>
+        <item>«Máxima calidad» se ve mejor pero gasta más batería. Úsala solo en el widget que más te guste.</item>
+        <item>Bajar la velocidad también ahorra batería.</item>
+        <item>Puedes poner un botón de pausa en la esquina que quieras del widget.</item>
+        <item>Al tocar el widget puede alternar la animación o abrir la app: elígelo abajo.</item>
+    </string-array>
+</resources>

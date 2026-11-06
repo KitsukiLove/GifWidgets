@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Same order as SeasonChoice: AUTO, CLASICA, VALLE, PRIMAVERA, VERANO, OTONO, INVIERNO, HALLOWEEN, NAVIDAD -->
+    <string-array name="season_choice_names">
+        <item>Automatic</item>
+        <item>Classic</item>
+        <item>Valley</item>
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Autumn</item>
+        <item>Winter</item>
+        <item>Halloween</item>
+        <item>Christmas</item>
+    </string-array>
+    <string-array name="tips_library">
+        <item>You can pick several GIFs at once when importing: they are added one after another.</item>
+        <item>Tap ⋯ on a window to edit, pin as a widget, rename or duplicate the GIF.</item>
+        <item>Very heavy GIFs look less smooth in a widget. If one is huge, trim it in the editor.</item>
+        <item>The ▶ button in the bottom bar pauses all your widgets at once.</item>
+        <item>With battery saver on, widgets pause by themselves. You can change that in Settings.</item>
+        <item>Short on space? Save the GIF optimized in the editor: it weighs much less.</item>
+        <item>The buttons at the top switch day and night, music and the background season.</item>
+        <item>You can switch between the Pixel and Colina XP styles with the little window button below.</item>
+    </string-array>
+    <string-array name="tips_editor">
+        <item>Watch the memory counter: if it goes over budget, lower the maximum size or the frames per second.</item>
+        <item>“Save optimized” makes the GIF ready to use in a widget.</item>
+        <item>With “Sharp pixels” pixel art stays clean when it is shrunk.</item>
+        <item>If the GIF has a one-colour background, try the eyedropper to remove it.</item>
+        <item>Removing frames you do not need saves memory and battery.</item>
+        <item>Turn on “View original” to compare with the unchanged GIF.</item>
+    </string-array>
+    <string-array name="tips_widget">
+        <item>“Fill” covers the whole widget, cropping a little; “Fit” shows the whole GIF with empty bars.</item>
+        <item>“Auto” picks how to fit the GIF by itself. If you do not like it, try “Fit” or “Fill”.</item>
+        <item>“Maximum quality” looks better but uses more battery. Use it only on the widget you love most.</item>
+        <item>A lower speed also saves battery.</item>
+        <item>You can put a pause button in any corner of the widget.</item>
+        <item>Tapping the widget can toggle the animation or open the app: choose it below.</item>
+    </string-array>
+</resources>

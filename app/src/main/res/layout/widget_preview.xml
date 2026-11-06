@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- previewLayout (Android 12-14): static picture shown in the widget picker. It is only a stand-in:
+     it cannot show the user's GIF (Android 15+ gets the real first frame from WidgetPreviews).
+     Only RemoteViews-safe views here. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_preview_bg">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_widget_button"
+        android:importantForAccessibility="no"
+        android:padding="14dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_widget_play" />
+</FrameLayout>

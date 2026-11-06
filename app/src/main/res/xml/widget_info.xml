@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- updatePeriodMillis="0": never periodic. widgetFeatures="reconfigurable|configuration_optional" (Android 12+): placing the widget does NOT open
+     the configuration; WidgetUpdater gives it the newest animation and the default look, and the user can still
+     reopen the configuration later. Older Android versions still show the configuration when placing it.
+     Previews: previewLayout (Android 12-14) and previewImage (older launchers) are static placeholders;
+     on Android 15+ WidgetPreviews.refresh() publishes the real first frame with setWidgetPreview.
+     widgetCategory home_screen|keyguard: also offered on the lock-screen widget page (Android 16 QPR2+ phones);
+     older versions ignore keyguard. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="110dp"
+    android:minResizeWidth="40dp"
+    android:minResizeHeight="40dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_static"
+    android:configure="app.gifwidgets.widget.WidgetConfigureActivity"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard"
+    android:widgetFeatures="reconfigurable|configuration_optional"
+    android:description="@string/widget_description"
+    android:previewLayout="@layout/widget_preview"
+    android:previewImage="@drawable/widget_preview_image" />

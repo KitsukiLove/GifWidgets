@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Card used by the static widget-picker preview (previewLayout): night-purple with a pixel frame. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#FF1A0F3A" />
+    <stroke android:width="3dp" android:color="#FF6A52D8" />
+    <corners android:radius="4dp" />
+</shape>

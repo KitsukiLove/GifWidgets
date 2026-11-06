@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Background of the widget's pause / play button: a notched pixel button (purple, dark frame, light top-left
+     edge and darker bottom-right edge), like the buttons of the app. Stretches to the 48 dp button. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path android:fillColor="#FF2A1650" android:pathData="M1,0h14v1h1v14h-1v1h-14v-1h-1v-14h1z" />
+    <path android:fillColor="#FF8E63F5" android:pathData="M2,1h12v1h1v12h-1v1h-12v-1h-1v-12h1z" />
+    <path android:fillColor="#FFB9A6FF" android:pathData="M2,2h11v1h-11z M2,3h1v10h-1z" />
+    <path android:fillColor="#FF6B3FD4" android:pathData="M3,13h11v1h-11z M13,3h1v10h-1z" />
+</vector>

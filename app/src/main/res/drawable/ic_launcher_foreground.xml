@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive icon foreground layer. Original glyph (not derived from any
+  existing logo/mascot): a simple rounded picture-frame outline with a
+  small heart inside, evoking "an animated frame on your screen". Kept
+  inside the ~66x66dp safe zone (108 viewport, roughly x/y 21..87).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Frame outline -->
+    <path
+        android:pathData="M30,30h48v48h-48z"
+        android:strokeColor="#9EE6DC"
+        android:strokeWidth="6"
+        android:fillColor="#00000000"/>
+
+    <!-- Small heart, centered in the frame -->
+    <path
+        android:pathData="M44,52 C44,46 51,46 54,50 C57,46 64,46 64,52 C64,58 54,66 54,66 C54,66 44,58 44,52 Z"
+        android:fillColor="#FFB3C6"/>
+
+</vector>

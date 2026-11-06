@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Stage 1 placeholder "resting frame" for the static widget — an original
+  vector graphic (not decoded from any GIF; the real decoder arrives in
+  stage 2), loosely matching the 1080x498 aspect ratio of the sample banner
+  so the widget's proportions look right from the start. Dark background,
+  a thin orbit ring, a few soft dots and a simple heart, all drawn fresh for
+  this project.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="216dp"
+    android:height="100dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="498">
+
+    <!-- Background -->
+    <path
+        android:pathData="M0,0h1080v498h-1080z"
+        android:fillColor="#0A0A0F"/>
+
+    <!-- Thin orbit ring -->
+    <path
+        android:pathData="M540,60 A360,180 0,1,1 539,60"
+        android:strokeColor="#4DE0C8FF"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"/>
+
+    <!-- Soft stars -->
+    <path android:pathData="M160,120m-6,0a6,6 0,1,1 12,0a6,6 0,1,1 -12,0" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M160,120m-14,0a14,14 0,1,1 28,0a14,14 0,1,1 -28,0" android:fillColor="#22FFFFFF"/>
+    <path android:pathData="M900,380m-5,0a5,5 0,1,1 10,0a5,5 0,1,1 -10,0" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M900,380m-12,0a12,12 0,1,1 24,0a12,12 0,1,1 -24,0" android:fillColor="#22FFFFFF"/>
+    <path android:pathData="M740,100m-4,0a4,4 0,1,1 8,0a4,4 0,1,1 -8,0" android:fillColor="#FFFFFF"/>
+
+    <!-- Heart (two circles + triangle), soft pink -->
+    <path
+        android:pathData="M300,360 C300,320 350,320 360,350 C370,320 420,320 420,360 C420,395 360,430 360,430 C360,430 300,395 300,360 Z"
+        android:fillColor="#FF8FB3"/>
+
+    <!-- Pixelated-feel title bar stand-in -->
+    <path android:pathData="M460,230h30v30h-30z" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M500,230h30v30h-30z" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M540,230h30v30h-30z" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M580,230h30v30h-30z" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M620,230h30v30h-30z" android:fillColor="#FFFFFF"/>
+
+</vector>

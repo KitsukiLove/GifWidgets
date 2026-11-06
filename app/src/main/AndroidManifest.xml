@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions: ONLY for the optional "Máxima calidad" mode of a widget (a foreground service that plays the
+         GIF frame by frame, with a notification while it runs). Nothing here gives access to the network or to
+         any data. androidx.core injects the signature permission removed below; we do not use it. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <permission
+        android:name="${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        tools:node="remove" />
+    <uses-permission
+        android:name="${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        tools:node="remove" />
+
+    <application
+        android:name=".GifWidgetsApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/backup_rules"
+        android:fullBackupContent="@xml/backup_rules_legacy"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GifWidgets">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Share target: other apps start it, so it must be exported. It treats the
+             shared file as untrusted (signature, size and dimension checks in GifImporter).
+             configChanges: keep the import running through rotation. -->
+        <activity
+            android:name=".ImportActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/import_share_label">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/gif" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <!-- "Widgets": the placed widgets and a shortcut to configure each. Only our own screens start it. -->
+        <activity
+            android:name=".MyWidgetsActivity"
+            android:exported="false" />
+
+        <!-- Editor: only our own library screen starts it, so it is not exported.
+             configChanges: keep the editor state through rotation. -->
+        <activity
+            android:name=".EditorActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode"
+            android:exported="false" />
+
+        <!-- Started by the launcher (another process): must be exported. -->
+        <!-- configChanges: rotating the phone or changing the theme must not throw away the settings being edited. -->
+        <activity
+            android:name=".widget.WidgetConfigureActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widget.GifWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_label_4x2">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+
+        <!-- Same widget in two more default sizes (the user can still resize any of them). -->
+        <receiver
+            android:name=".widget.GifWidgetProvider2x2"
+            android:exported="true"
+            android:label="@string/widget_label_2x2">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_2x2" />
+        </receiver>
+        <receiver
+            android:name=".widget.GifWidgetProvider4x4"
+            android:exported="true"
+            android:label="@string/widget_label_4x4">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_4x4" />
+        </receiver>
+
+        <!-- Widget taps, the night alarm and "play once": only our own explicit PendingIntents reach it.
+             The power-save action is a system broadcast (best effort: VERIFY that the system delivers it
+             to a manifest receiver; if not, battery saver is checked on every update, tap and app open). -->
+        <receiver
+            android:name=".widget.WidgetActionReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.os.action.POWER_SAVE_MODE_CHANGED" />
+                <!-- The night window is in local time: re-arm its alarm when the zone or the clock changes. -->
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <!-- "Máxima calidad" playback. Not exported: only our own widget updates start it. -->
+        <service
+            android:name=".widget.HighQualityService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Plays an animated GIF frame by frame in a home screen widget, only while the user has turned on the high quality mode for that widget" />
+        </service>
+
+        <!-- Quick Settings tile: the universal on/off switch. ACTIVE_TILE = bound only on tap or refresh. -->
+        <service
+            android:name=".control.AnimationsTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile_animation"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_title" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false"
+            android:label="@string/privacy_title" />
+
+        <!-- Exported receiver added by androidx.profileinstaller; not needed. -->
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            tools:node="remove" />
+    </application>
+</manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Animated widget: a ViewFlipper that the LAUNCHER advances (autoStart); frames are added with
+     RemoteViews.addView (see WidgetUpdater). VERIFY on the Pixel 9 that it stops with the screen off. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/widget_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autoStart="true" />
+
+    <ImageButton
+        android:id="@+id/widget_btn_tl"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_widget_button"
+        android:contentDescription="@string/widget_button_pause"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_widget_pause"
+        android:visibility="gone" />
+    <ImageButton
+        android:id="@+id/widget_btn_tr"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_widget_button"
+        android:contentDescription="@string/widget_button_pause"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_widget_pause"
+        android:visibility="gone" />
+    <ImageButton
+        android:id="@+id/widget_btn_bl"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_widget_button"
+        android:contentDescription="@string/widget_button_pause"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_widget_pause"
+        android:visibility="gone" />
+    <ImageButton
+        android:id="@+id/widget_btn_br"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_widget_button"
+        android:contentDescription="@string/widget_button_pause"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_widget_pause"
+        android:visibility="gone" />
+</FrameLayout>

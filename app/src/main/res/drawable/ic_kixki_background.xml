@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sky in hard stripes (like the page), a pixel sun, a cloud and a hill. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFB9A6FF" android:pathData="M0,0h108v19h-108z" />
+    <path android:fillColor="#FFC8B5FF" android:pathData="M0,18h108v19h-108z" />
+    <path android:fillColor="#FFD8C6FF" android:pathData="M0,36h108v19h-108z" />
+    <path android:fillColor="#FFE8D3FF" android:pathData="M0,54h108v19h-108z" />
+    <path android:fillColor="#FFFBD7F0" android:pathData="M0,72h108v19h-108z" />
+    <path android:fillColor="#FFFFE6D2" android:pathData="M0,90h108v19h-108z" />
+    <path android:fillColor="#FFFFC23A" android:pathData="M36,27h3v3h-3zM33,30h9v3h-9zM36,33h3v3h-3z" />
+    <path android:fillColor="#FFFFD36E" android:pathData="M36,30h3v3h-3z" />
+    <path android:fillColor="#FFFFF7E6" android:pathData="M60,24h9v3h-9zM57,27h15v3h-15zM60,30h9v3h-9z" />
+    <path android:fillColor="#FF86D8B2" android:pathData="M0,66h108v42h-108z" />
+    <path android:fillColor="#FF4FB98C" android:pathData="M0,66h108v3h-108z" />
+    <path android:fillColor="#FF2AA882" android:pathData="M0,90h108v18h-108z" />
+    <path android:fillColor="#FFFFFAF0" android:pathData="M12,75h3v3h-3zM90,78h3v3h-3zM24,84h3v3h-3zM81,84h3v3h-3z" />
+</vector>

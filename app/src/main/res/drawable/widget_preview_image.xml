@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- previewImage: fallback for launchers that ignore previewLayout. A night-purple card with the play button.
+     VERIFY: that the Pixel launcher accepts a layer-list as previewImage (it only needs a Drawable). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF1A0F3A" />
+            <stroke android:width="3dp" android:color="#FF6A52D8" />
+            <corners android:radius="4dp" />
+            <size
+                android:width="200dp"
+                android:height="200dp" />
+        </shape>
+    </item>
+    <item
+        android:width="56dp"
+        android:height="56dp"
+        android:drawable="@drawable/bg_widget_button"
+        android:gravity="center" />
+    <item
+        android:width="28dp"
+        android:height="28dp"
+        android:drawable="@drawable/ic_widget_play"
+        android:gravity="center" />
+</layer-list>

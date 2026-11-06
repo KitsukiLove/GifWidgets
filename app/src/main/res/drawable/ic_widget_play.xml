@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pixel play triangle (12 x 12 grid). White on purpose: also used as a notification action icon (the system draws those single-colour). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="12"
+    android:viewportHeight="12">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,1h2v1h-2zM3,2h3v1h-3zM3,3h4v1h-4zM3,4h5v1h-5zM3,5h6v1h-6zM3,6h6v1h-6zM3,7h5v1h-5zM3,8h4v1h-4zM3,9h3v1h-3zM3,10h2v1h-2z" />
+</vector>

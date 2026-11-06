@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+ (API 31+), referenced by android:dataExtractionRules.
+
+  Goal: nothing goes to Google's cloud backup, but the library DOES travel to
+  a new phone through the local cable / Wi-Fi device-to-device transfer.
+
+  - <cloud-backup>: every domain the app can use is excluded.
+  - <device-transfer>: no exclusions, so everything transfers.
+
+  VERIFY: that path="." excludes a whole domain. The schema shape is
+  documented (cloud-backup / device-transfer / include / exclude with domain
+  and path); the exclude-everything spelling has not been tested on a device.
+  https://developer.android.com/identity/data/autobackup
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <!-- Intentionally empty: transfer everything to a new device. -->
+    </device-transfer>
+</data-extraction-rules>

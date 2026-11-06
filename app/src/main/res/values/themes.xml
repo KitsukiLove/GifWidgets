@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Minimal manifest-level (pre-Compose) window theme. Compose itself owns the
+  real Material 3 + dynamic-color theming at runtime (ui/theme/Theme.kt) —
+  this XML theme only controls the window background shown for an instant
+  before Compose draws, and system-bar appearance. Split light/dark via
+  values-night/themes.xml rather than a DayNight parent, to keep the parent
+  theme name something I'm fully confident exists on minSdk 26.
+-->
+<resources>
+    <style name="Theme.GifWidgets" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@color/window_background</item>
+        <item name="android:navigationBarColor">@color/window_background</item>
+    </style>
+</resources>

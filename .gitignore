@@ -1,0 +1,13 @@
+# Android Studio / Gradle: local, regenerated, or machine-specific
+/.gradle/
+/.kotlin/
+/build/
+/local.properties
+/.idea/
+*.iml
+.DS_Store
+/captures/
+/app/.idea/
+/app/.gradle/
+/app/build/
+/app/local.properties
